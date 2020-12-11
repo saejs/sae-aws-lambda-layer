@@ -1,0 +1,26 @@
+{
+    "name": "sae-aws-lambda-layer",
+    "version": "0.0.3",
+    "description": "Saejs to aws lambda layer",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/saejs/sae-aws-lambda-layer.git"
+    },
+    "keywords": [
+        "sae",
+        "aws",
+        "lambda"
+    ],
+    "author": "Bruno Gonçalves",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/saejs/sae-aws-lambda-layer/issues"
+    },
+    "homepage": "https://github.com/saejs/sae-aws-lambda-layer#readme",
+    "dependencies": {
+        "sae-framework": "^0.0.25",
+        "sae-aws-lambda": "^0.0.3",
+        "sequelize": "^6.3.5",
+        "mysql2": "^2.2.5"
+    }
+}
