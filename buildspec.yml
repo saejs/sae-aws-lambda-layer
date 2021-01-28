@@ -1,0 +1,25 @@
+version: 0.2
+
+env:
+  variables:
+     NODE_ENV: "build"
+
+phases:
+  install:
+    runtime-versions:
+        nodejs: 10
+
+  build:
+    commands:
+        # build app.zip
+        - npm i --only=prod
+        - mkdir nodejs
+        - cp -fvrp ./node_modules/ ./nodejs/node_modules/
+        - zip -r layer.zip nodejs
+        - du -sh layer.zip
+
+  post_build:
+    commands:
+        # Fazer deploy no Aws Lambda Layer e Function
+        - aws lambda publish-layer-version --layer-name framework_nodejs --zip-file fileb://$CODEBUILD_SRC_DIR/layer.zip --region sa-east-1 --compatible-runtimes nodejs10.x,nodejs12.x --description "git $CODEBUILD_RESOLVED_SOURCE_VERSION | build $CODEBUILD_BUILD_NUMBER"
+        - echo Finalizou OK
