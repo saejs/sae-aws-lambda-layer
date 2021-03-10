@@ -1,6 +1,6 @@
 {
     "name": "sae-aws-lambda-layer",
-    "version": "0.7.6",
+    "version": "0.8.0",
     "description": "Saejs to aws lambda layer",
     "repository": {
         "type": "git",
@@ -18,9 +18,9 @@
     },
     "homepage": "https://github.com/saejs/sae-aws-lambda-layer#readme",
     "dependencies": {
-        "sae-aws-lambda": "^0.1.6",
-        "sae-framework": "^0.15.10",
+        "sae-aws-lambda": "^0.2.0",
+        "sae-framework": "^0.15.12",
         "axios": "^0.21.1",
-        "aws-sdk": "^2.849.0"
+        "aws-sdk": "^2.860.0"
     }
 }
