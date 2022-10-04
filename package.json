@@ -1,6 +1,6 @@
 {
     "name": "sae-aws-lambda-layer",
-    "version": "0.8.35",
+    "version": "0.9.0",
     "description": "Saejs to aws lambda layer",
     "repository": {
         "type": "git",
