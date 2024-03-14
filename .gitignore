@@ -6,8 +6,8 @@
 /db/vendor_db
 composer.lock
 /node_modules
-package.lock
-package-lock.json
+__package.lock
+__package-lock.json
 
 # Editores
 /.vscode
