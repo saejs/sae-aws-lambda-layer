@@ -22,5 +22,5 @@ phases:
   post_build:
     commands:
         # Fazer deploy no Aws Lambda Layer e Function
-        - aws lambda publish-layer-version --layer-name framework --zip-file fileb://$CODEBUILD_SRC_DIR/layer.zip --region $AWS_REGION --compatible-runtimes nodejs10.x nodejs12.x nodejs14.x nodejs16.x --description "git $CODEBUILD_RESOLVED_SOURCE_VERSION | build $CODEBUILD_BUILD_NUMBER"
+        - aws lambda publish-layer-version --layer-name framework --zip-file fileb://$CODEBUILD_SRC_DIR/layer.zip --region $AWS_REGION --compatible-runtimes nodejs10.x nodejs12.x nodejs14.x nodejs16.x nodejs18.x --description "git $CODEBUILD_RESOLVED_SOURCE_VERSION | build $CODEBUILD_BUILD_NUMBER"
         - echo Finalizou OK
